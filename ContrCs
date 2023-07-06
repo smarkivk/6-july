@@ -1,0 +1,22 @@
+@RestController//error due to responsible at end  // for handling HTTP requests and returning JSON responses.
+@RequestMapping("/catalogue") //annotation sets the base URL path for the controller's endpoints.
+public class CatalogueController {
+	@Autowired //annotation enables dependency injection of the CatalogueService
+	           // bean, allowing the controller to use its methods for handling requests.
+	CatalogueService catalogueService;//object made using autowired// second catalogueservice is name given and first isfor implem
+	// bean  the objects that form the backbone of your application and
+	// that are managed by the Spring IoC container are called beans
+
+
+	
+	
+	@PostMapping("/add")//data by postman // json to java obj convert
+	public String addCoupon(@RequestBody Coupons deal) { // receives a JSON payload containing a
+		// Coupons object in the request body.
+		// The @RequestBody annotation maps the request body to the deal parameter.
+		 
+		return catalogueService.save(deal);//It then calls the save method (in service )of the CatalogueService to
+		// add the coupon to the catalog.
+		//save.deal pe return karega
+		//station of data coming and going
+	}
