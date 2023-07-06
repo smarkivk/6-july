@@ -1,0 +1,13 @@
+ArrayList<?> myList = new ArrayList<>();
+myList.add("Hello"); // Adding a String object
+myList.add(42); // Adding an Integer object
+myList.add(true); // Adding a Boolean object
+
+Object element = myList.get(0); // Retrieving an element as Object type
+System.out.println(element); // Output: Hello
+
+//The ? denotes an unknown type that can be any class or interface.
+It is useful when you want to create a collection that can hold objects of different types.
+You can add elements to the ArrayList using the add() method, but you can only retrieve elements as Object type.
+Since the type is unknown, you cannot invoke methods specific to the type of elements in the ArrayList.
+It provides flexibility when you don't need to perform specific operations on the elements, but you want a general-purpose collection.
